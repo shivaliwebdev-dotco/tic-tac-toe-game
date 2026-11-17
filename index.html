@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff7e8">
+    <meta name="description" content="Play a fun game of Tic Tac Toe against the computer.">
+
+    <title>Tic Tac Toe - Tiny Battle</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="confetti confetti-one">✦</div>
+    <div class="confetti confetti-two">✿</div>
+    <div class="confetti confetti-three">＋</div>
+
+    <main class="game-shell">
+
+        <!-- Navigation -->
+        <header class="topbar">
+
+            <a class="brand" href="#">
+                <span class="brand-icon">✳</span>
+                tiny<span>battle</span>
+            </a>
+
+            <div class="level-pill">
+                <span class="online-dot"></span>
+                PLAYER VS CPU
+            </div>
+
+        </header>
+
+
+        <!-- Introduction -->
+        <section class="intro">
+
+            <div class="eyebrow">
+                THE CLASSIC, WITH A TWIST <span>★</span>
+            </div>
+
+            <h1>
+                Let's play<br>
+                <span>tic-tac-toe!</span>
+            </h1>
+
+            <p>
+                One board. Two rivals. May the best brain win.
+            </p>
+
+        </section>
+
+
+        <!-- Scoreboard -->
+        <section class="scoreboard">
+
+            <div class="score-card player-card">
+
+                <div class="avatar avatar-x">X</div>
+
+                <div class="score-meta">
+                    <span class="score-name">YOU</span>
+                    <strong id="player-score">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="score-card draw-card">
+
+                <div class="avatar avatar-draw">＝</div>
+
+                <div class="score-meta">
+                    <span class="score-name">DRAWS</span>
+                    <strong id="draw-score">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="score-card cpu-card">
+
+                <div class="avatar avatar-o">O</div>
+
+                <div class="score-meta">
+                    <span class="score-name">CPU</span>
+                    <strong id="cpu-score">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Game Area -->
+        <section class="game-card">
+
+            <div class="game-topline">
+
+                <div class="round-label">
+                    <span class="sparkle">✦</span>
+                    ROUND
+                    <span id="round-number">01</span>
+                </div>
+
+                <div class="turn-status" id="turn-status" aria-live="polite">
+                    <span class="turn-dot"></span>
+                    Your turn
+                </div>
+
+            </div>
+
+
+            <!-- Tic Tac Toe Board -->
+            <div class="board" id="board" role="group" aria-label="Tic tac toe board">
+
+                <button class="cell" data-index="0" aria-label="Empty cell 1"></button>
+                <button class="cell" data-index="1" aria-label="Empty cell 2"></button>
+                <button class="cell" data-index="2" aria-label="Empty cell 3"></button>
+
+                <button class="cell" data-index="3" aria-label="Empty cell 4"></button>
+                <button class="cell" data-index="4" aria-label="Empty cell 5"></button>
+                <button class="cell" data-index="5" aria-label="Empty cell 6"></button>
+
+                <button class="cell" data-index="6" aria-label="Empty cell 7"></button>
+                <button class="cell" data-index="7" aria-label="Empty cell 8"></button>
+                <button class="cell" data-index="8" aria-label="Empty cell 9"></button>
+
+            </div>
+
+
+            <!-- Result Message -->
+            <div class="result-panel" id="result-panel" hidden>
+
+                <div class="result-emoji" id="result-emoji">
+                    🎉
+                </div>
+
+                <div>
+                    <strong id="result-title">
+                        You got it!
+                    </strong>
+
+                    <span id="result-message">
+                        That was a brilliant move.
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="game-actions">
+
+                <button class="play-button" id="play-again" type="button">
+                    <span>↻</span>
+                    Play again
+                </button>
+
+                <button class="reset-button" id="reset-score" type="button">
+                    Reset score
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <span>
+                Made for fun, powered by a little strategy.
+            </span>
+
+            <span class="footer-stars">✦ ✧ ✦</span>
+
+        </footer>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
